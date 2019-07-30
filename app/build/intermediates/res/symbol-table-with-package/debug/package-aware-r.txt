@@ -672,6 +672,7 @@ drawable asser
 drawable food
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_settings_white_24dp
 drawable ice
 drawable logo
 drawable logobridge
@@ -813,6 +814,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id setting
 id shortcut
 id showCustom
 id showHome
