@@ -8,6 +8,100 @@
     android:layout_height="match_parent"
     tools:context=".SubServes">
 
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:id="@+id/jous"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_width="500dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_margin="20dp"
+                android:id="@+id/aseer"
+                android:layout_weight="1"
+                android:src="@drawable/j"
+                android:layout_width="wrap_content"
+                android:layout_height="500dp" />
+            <TextView
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:id="@+id/name"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:text="العصائر"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_margin="20dp"
+                android:id="@+id/bared"
+                android:layout_weight="1"
+                android:src="@drawable/c"
+                android:layout_width="wrap_content"
+                android:layout_height="500dp" />
+            <TextView
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:text="مشروبات غازية"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_width="500dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_margin="20dp"
+                android:id="@+id/kokteel"
+                android:layout_weight="1"
+                android:src="@drawable/k"
+                android:layout_width="wrap_content"
+                android:layout_height="500dp" />
+            <TextView
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:text="كوكتيل"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_margin="20dp"
+                android:id="@+id/hot"
+                android:layout_weight="1"
+                android:src="@drawable/hot"
+                android:layout_width="wrap_content"
+                android:layout_height="500dp" />
+            <TextView
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="40dp"
+                android:text="مشروبات ساخنة"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler"

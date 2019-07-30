@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#010001"
+    android:background="#262626"
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context=".thread">
-<ImageView
-    android:src="@drawable/logobridge"
-    android:layout_width="match_parent"
-    android:layout_height="500dp" />
+
+    <ImageView
+        android:layout_width="536dp"
+        android:layout_height="362dp"
+        android:src="@drawable/logo" />
 
 </LinearLayout>

@@ -669,11 +669,15 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable asser
+drawable c
 drawable food
+drawable hot
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_settings_white_24dp
 drawable ice
+drawable j
+drawable k
 drawable logo
 drawable logobridge
 drawable notification_action_background
@@ -722,7 +726,9 @@ id add
 id alertTitle
 id all
 id always
+id aseer
 id async
+id bared
 id barrier
 id beginning
 id blocking
@@ -762,6 +768,7 @@ id group_divider
 id groups
 id home
 id homeAsUp
+id hot
 id icon
 id icon_group
 id ifRoom
@@ -770,6 +777,8 @@ id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id jous
+id kokteel
 id left
 id line1
 id line3

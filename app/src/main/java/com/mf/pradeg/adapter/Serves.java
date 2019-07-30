@@ -50,7 +50,7 @@ public class Serves extends RecyclerView.Adapter<Serves.ViewHolder>  {
         price.setText(servesitem.getPrice());
         if (servesitem.getName().equals("--------------------")&&servesitem.getPrice().equals("--------------------")){
 
-            desc.setTextSize(30);
+            desc.setTextSize(40);
            desc.setTextColor(Color.parseColor("#961817"));
 
                }

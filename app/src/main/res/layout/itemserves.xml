@@ -10,10 +10,11 @@
        android:layout_height="match_parent">
       <TextView
           android:layout_weight="1"
+          android:gravity="left"
           android:layout_gravity="start"
           android:id="@+id/name"
           android:textColor="#ECBE72"
-          android:textSize="18dp"
+          android:textSize="30dp"
           android:text="gffffffffffffffffg"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" />
@@ -22,7 +23,7 @@
           android:layout_weight="1"
           android:layout_gravity="center"
           android:textColor="#ECBE72"
-          android:textSize="18dp"
+          android:textSize="30dp"
           android:id="@+id/desc"
           android:text="gffffffffffffffffg"
           android:layout_width="wrap_content"
@@ -31,8 +32,8 @@
           android:layout_weight="1"
           android:layout_gravity="end"
           android:textColor="#ECBE72"
-          android:textSize="18dp"
-          android:gravity="left"
+          android:textSize="30dp"
+         android:gravity="right"
           android:id="@+id/price"
           android:text="gffffffffffffffffg"
           android:layout_width="wrap_content"

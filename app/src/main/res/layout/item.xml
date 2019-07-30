@@ -15,7 +15,7 @@
         <TextView
 
             android:id="@+id/nameserves"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:textColor="#fff"
             android:text="sfddddddddddddddddddvk"
             android:layout_width="wrap_content"
