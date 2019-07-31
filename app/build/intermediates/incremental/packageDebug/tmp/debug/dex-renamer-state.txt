@@ -1,4 +1,4 @@
-#Tue Jul 30 22:45:13 EEST 2019
-base.0=C\:\\Users\\pc-streams\\Desktop\\pradeg\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+#Wed Jul 31 15:26:16 EEST 2019
+base.0=C\:\\Users\\m.waleed\\AndroidStudioProjects\\pradeg\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
 path.0=classes.dex
 renamed.0=classes.dex

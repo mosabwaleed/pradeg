@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jtds-1.2.7(SQL Java)/jtds-1.2.7(SQL Java).iml" filepath="$PROJECT_DIR$/jtds-1.2.7(SQL Java)/jtds-1.2.7(SQL Java).iml" />
       <module fileurl="file://$PROJECT_DIR$/pradeg.iml" filepath="$PROJECT_DIR$/pradeg.iml" />
     </modules>
   </component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jtds-1.2.7(SQL Java).jtds-1.2.7(SQL Java)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jtds-1.2.7(SQL Java)/jtds-1.2.7(SQL Java).jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

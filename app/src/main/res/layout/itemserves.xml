@@ -4,40 +4,44 @@
     android:layout_height="wrap_content">
 
    <LinearLayout
-       android:layout_margin="5dp"
-       android:orientation="horizontal"
+       android:id="@+id/order"
        android:layout_width="match_parent"
-       android:layout_height="match_parent">
+       android:layout_height="match_parent"
+       android:layout_margin="5dp"
+       android:orientation="horizontal">
+
       <TextView
+          android:id="@+id/name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start"
           android:layout_weight="1"
           android:gravity="left"
-          android:layout_gravity="start"
-          android:id="@+id/name"
-          android:textColor="#ECBE72"
-          android:textSize="30dp"
           android:text="gffffffffffffffffg"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <TextView
-          android:gravity="center"
-          android:layout_weight="1"
-          android:layout_gravity="center"
           android:textColor="#ECBE72"
-          android:textSize="30dp"
+          android:textSize="30dp" />
+
+      <TextView
           android:id="@+id/desc"
-          android:text="gffffffffffffffffg"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <TextView
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
           android:layout_weight="1"
-          android:layout_gravity="end"
-          android:textColor="#ECBE72"
-          android:textSize="30dp"
-         android:gravity="right"
-          android:id="@+id/price"
+          android:gravity="center"
           android:text="gffffffffffffffffg"
+          android:textColor="#ECBE72"
+          android:textSize="30dp" />
+
+      <TextView
+          android:id="@+id/price"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+          android:layout_height="wrap_content"
+          android:layout_gravity="end"
+          android:layout_weight="1"
+          android:gravity="right"
+          android:text="gffffffffffffffffg"
+          android:textColor="#ECBE72"
+          android:textSize="30dp" />
 
    </LinearLayout>
    <View
