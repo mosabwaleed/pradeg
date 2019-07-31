@@ -15,11 +15,11 @@ String ip,classs,db,un,password;
 
     @SuppressLint("NewApi")
     public Connection CONN(Context context) {
-         ip = "remotemysql.com:3306";
-         classs = "net.sourceforge.jtds.jdbc.Driver";
-         db = "4vnWf0srgu";
-         un = "4vnWf0srgu";
-         password = "XPBurEnGvH";
+         ip = "sql2.freesqldatabase.com:3306";
+         classs = "com.mysql.jdbc.Driver";
+         db = "sql2300441";
+         un = "sql2300441";
+         password = "jG1%xD9%";
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -27,10 +27,8 @@ String ip,classs,db,un,password;
         String ConnURL;
         try {
             Class.forName(classs);
-            ConnURL = "jdbc:jtds:sqlserver://" + ip + ";"
-                    + "databaseName=" + db + ";user=" + un + ";password="
-                    + password + ";";
-            conn = DriverManager.getConnection(ConnURL);
+            //ConnURL = ;
+            conn = DriverManager.getConnection("jdbc:mysql://sql2.freesqldatabase.com:3306/sql2300441","sql2300441","jG1%xD9%");
         }
         catch (SQLException se)
         {
@@ -38,12 +36,14 @@ String ip,classs,db,un,password;
             return null;
         }
         catch (ClassNotFoundException e) {
+            Log.e("ClassNotFoundException", e.getMessage());
             return null;
         }
         catch (Exception e) {
             Log.e("error", e.getMessage());
             return null;
         }
+
         return conn;
     }
 }

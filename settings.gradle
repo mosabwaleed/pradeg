@@ -1,1 +1,1 @@
-include ':app', ':jtds-1.2.7(SQL Java)'
+include ':app', ':jtds-1.2.7(SQL Java)', ':mysql-connector'
