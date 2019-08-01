@@ -82,6 +82,7 @@ public class Serves extends RecyclerView.Adapter<Serves.ViewHolder>  {
                             if(sharedPreference.getFavorites(context).size()>0) {
                                 for (int j = 0; j < sharedPreference.getFavorites(context).size(); j++) {
                                     if (sharedPreference.getFavorites(context).get(j).get("name").equalsIgnoreCase(serves.get(i).getName())) {
+                                        System.out.println(sharedPreference.getFavorites(context).get(j).get("name") + "    check   "+serves.get(i).getName());
                                         int q = Integer.parseInt(sharedPreference.getFavorites(context).get(j).get("quantity"));
                                         q += Integer.parseInt(input.getText().toString());
                                         sharedPreference.removeFavorite(context, j);
@@ -97,6 +98,7 @@ public class Serves extends RecyclerView.Adapter<Serves.ViewHolder>  {
                                         orders.put("price", serves.get(i).getPrice());
                                         orders.put("quantity", input.getText().toString());
                                         sharedPreference.addFavorite(context, orders);
+                                        break;
                                     }
                                 }
                             }
