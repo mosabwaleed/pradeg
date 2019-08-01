@@ -1,6 +1,8 @@
 package com.mf.pradeg;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,10 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,6 +31,9 @@ public class Cart extends AppCompatActivity {
     SimpleAdapter sAdap;
     TextView total;
     Double totalprice =0.0;
+    Connection connect;
+    String ConnectionResult = "";
+    Boolean isSuccess = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,5 +130,51 @@ public class Cart extends AppCompatActivity {
                 totalprice =0.0;
             }
         });
+
+        end.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ConnectionClass conStr=new ConnectionClass();
+                connect =conStr.CONN(Cart.this);
+                if (connect == null)
+                {
+                    ConnectionResult = "Check Your Internet Access!";
+                }
+                else {
+                    try{
+                    for (int i = 0; i < saleList.size(); i++) {
+                        String query = "insert into table"+getPrefs("tnum",Cart.this)+" (NAME, PRICE , quantity) values(N'"
+                                + saleList.get(i).get("name").toString() + "','" + saleList.get(i).get("price") + "','" + saleList.get(i).get("quantity") + "')";
+                        PreparedStatement preparedStmt = connect.prepareStatement(query);
+                        preparedStmt.execute();
+                        ConnectionResult = "successful";
+                        isSuccess = true;
+
+                    }
+                        connect.close();
+                    }
+                    catch (SQLException e){
+                        isSuccess = false;
+                        ConnectionResult = e.getMessage();
+                    }
+                    catch (Exception ex)
+                    {
+                        isSuccess = false;
+                        ConnectionResult = ex.getMessage();
+                    }
+                    System.out.println(ConnectionResult + "     conni");
+                }
+
+                new SharedPreference().removeall(Cart.this);
+                orders.setAdapter(null);
+                total.setText("0.0 JD");
+                totalprice =0.0;
+            }
+        });
+    }
+
+    public static String getPrefs(String key, Context context){
+        SharedPreferences sharedpreferences = context.getSharedPreferences("mosab_prefs", Context.MODE_PRIVATE);
+        return sharedpreferences.getString(key,"notfound");
     }
 }

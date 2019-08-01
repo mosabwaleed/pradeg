@@ -20,6 +20,7 @@ String ip,classs,db,un,password;
          db = "sql2300441";
          un = "sql2300441";
          password = "jG1%xD9%";
+        String unicode= "?useUnicode=yes&characterEncoding=UTF-8";
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -28,7 +29,7 @@ String ip,classs,db,un,password;
         try {
             Class.forName(classs);
             //ConnURL = ;
-            conn = DriverManager.getConnection("jdbc:mysql://sql2.freesqldatabase.com:3306/sql2300441","sql2300441","jG1%xD9%");
+            conn = DriverManager.getConnection("jdbc:mysql://sql2.freesqldatabase.com:3306/sql2300441"+unicode,"sql2300441","jG1%xD9%");
         }
         catch (SQLException se)
         {

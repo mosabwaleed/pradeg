@@ -122,9 +122,9 @@ public class MainActivity extends AppCompatActivity {
             else
             {
                 String query = "CREATE TABLE table"+number+" ("
-                        + "NAME VARCHAR(20) NOT NULL,"
-                        + "PRICE VARCHAR(20) NOT NULL,"
-                        + "quantity VARCHAR(20) NOT NULL )";
+                        + "NAME NVARCHAR(20) NOT NULL,"
+                        + "PRICE NVARCHAR(20) NOT NULL,"
+                        + "quantity NVARCHAR(20) NOT NULL )";
                 Statement stmt = connect.createStatement();
                 stmt.executeUpdate(query);
                 ConnectionResult = "successful";
