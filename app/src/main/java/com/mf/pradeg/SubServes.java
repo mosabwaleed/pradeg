@@ -39,13 +39,14 @@ public class SubServes extends AppCompatActivity {
         jous = findViewById(R.id.jous);
         Intent intent = getIntent();
         position = intent.getIntExtra("type", 0);
-        serves = new Serves(this, servesitems);
+
         recyclerView = findViewById(R.id.recycler);
         LinearLayoutManager lm = new LinearLayoutManager(this);
         lm.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(lm);
         recyclerView.setHasFixedSize(true);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+        serves = new Serves(this, servesitems);
         recyclerView.setAdapter(serves);
 
         if (position == 0) {
@@ -109,10 +110,12 @@ public class SubServes extends AppCompatActivity {
                 servesitems.add(new Servesitem("ميلك شيك", "نكهات", "2.50"));
 
             }
+            serves = new Serves(this, servesitems);
+            recyclerView.setAdapter(serves);
             coc.setOnClickListener(this.onClickListener(R.id.kokteel,this,"coc"));
             cold.setOnClickListener(this.onClickListener(R.id.bared,this,"cold"));
-                hot.setOnClickListener(this.onClickListener(R.id.hot,this,"hot"));
-                jo.setOnClickListener(this.onClickListener(R.id.aseer,this,"jo"));
+            hot.setOnClickListener(this.onClickListener(R.id.hot,this,"hot"));
+            jo.setOnClickListener(this.onClickListener(R.id.aseer,this,"jo"));
         }
     public View.OnClickListener onClickListener( Integer id,  final Context con, final String content){
         return new View.OnClickListener() {
@@ -120,23 +123,24 @@ public class SubServes extends AppCompatActivity {
             public void onClick(View v) {
                 jous.setVisibility(View.GONE);
                 recyclerView.setVisibility(View.VISIBLE);
+                System.out.println(content + "      content");
                 if (position==2&&content.equals("hot")){
-                        servesitems.add(new Servesitem("--------------------", "المشروبات الساخنة", "--------------------"));
-                        servesitems.add(new Servesitem("قهوة بريدج", "", "2.00"));
-                        servesitems.add(new Servesitem("قهوة فرنسية", "", "2.00"));
-                        servesitems.add(new Servesitem("قهوة امريكية", "", "2.00"));
-                        servesitems.add(new Servesitem("كوفي لاتية", "", "2.00"));
-                        servesitems.add(new Servesitem("قهوة تركية", "", "1.00"));
-                        servesitems.add(new Servesitem("قهوة تركية دبل", "", "1.50"));
-                        servesitems.add(new Servesitem("اسبرسو", "", "1.50"));
-                        servesitems.add(new Servesitem("نيسكافية", "", "1.00"));
-                        servesitems.add(new Servesitem("كابتسينو ", "", "2.00"));
-                        servesitems.add(new Servesitem("موكا تشينو", "", "1.00"));
-                        servesitems.add(new Servesitem("شاي ", "", "1.00"));
-                        servesitems.add(new Servesitem("اعشاب", "", "1.00"));
-                        servesitems.add(new Servesitem("نسكويك", "", "2.00"));
+                    servesitems.add(new Servesitem("--------------------", "المشروبات الساخنة", "--------------------"));
+                    servesitems.add(new Servesitem("قهوة بريدج", "", "2.00"));
+                    servesitems.add(new Servesitem("قهوة فرنسية", "", "2.00"));
+                    servesitems.add(new Servesitem("قهوة امريكية", "", "2.00"));
+                    servesitems.add(new Servesitem("كوفي لاتية", "", "2.00"));
+                    servesitems.add(new Servesitem("قهوة تركية", "", "1.00"));
+                    servesitems.add(new Servesitem("قهوة تركية دبل", "", "1.50"));
+                    servesitems.add(new Servesitem("اسبرسو", "", "1.50"));
+                    servesitems.add(new Servesitem("نيسكافية", "", "1.00"));
+                    servesitems.add(new Servesitem("كابتسينو ", "", "2.00"));
+                    servesitems.add(new Servesitem("موكا تشينو", "", "1.00"));
+                    servesitems.add(new Servesitem("شاي ", "", "1.00"));
+                    servesitems.add(new Servesitem("اعشاب", "", "1.00"));
+                    servesitems.add(new Servesitem("نسكويك", "", "2.00"));
                 }
-                if (position==2&&content.equals("coc")){
+                else if (position==2&&content.equals("coc")){
                     servesitems.add(new Servesitem("--------------------", "الكوكتيل", "--------------------"));
                     servesitems.add(new Servesitem("كوكتيل بريدج", "خلطة خاصة", "3.00"));
                     servesitems.add(new Servesitem("دايت كوكتيل", "برتقال ,ليمون ,جريفوت, جراندن", "2.50"));
@@ -151,7 +155,7 @@ public class SubServes extends AppCompatActivity {
                     servesitems.add(new Servesitem("فروت سلد", "فواكة مشكلة, عصير برتقال", "3.50"));
                     servesitems.add(new Servesitem("ليليانا كوكتيل", "فراولة, موز , ايس كريم فانيلا, حليب", "3.00"));
                 }
-                if (position==2&&content.equals("cold")){
+                else if (position==2&&content.equals("cold")){
                     servesitems.add(new Servesitem("--------------------", "المشروبات الغازية", "--------------------"));
                     servesitems.add(new Servesitem("بترلمون", "", "1.00"));
                     servesitems.add(new Servesitem("ريد بول", "", "2.00"));
@@ -164,7 +168,7 @@ public class SubServes extends AppCompatActivity {
                     servesitems.add(new Servesitem("بابركان نكهات ", "", "1.50"));
                     servesitems.add(new Servesitem("مياه", "", ".50"));
                 }
-                if (position==2&&content.equals("jo")){
+                else if (position==2&&content.equals("jo")){
                     servesitems.add(new Servesitem("--------------------", "العصائر", "--------------------"));
                     servesitems.add(new Servesitem("برتقال", "", "2.00"));
                     servesitems.add(new Servesitem("اناناس", "", "2.00"));
@@ -178,12 +182,26 @@ public class SubServes extends AppCompatActivity {
                     servesitems.add(new Servesitem("منجا", "", "2.00"));
                     servesitems.add(new Servesitem("كيوي و ليمون و نعنع ", "", "2.50"));
                     servesitems.add(new Servesitem("برتقال و جزر", "", "2.00"));
-
                 }
-
+                serves = new Serves(SubServes.this, servesitems);
+                recyclerView.setAdapter(serves);
             }
         };
     }
 
+    @Override
+    public void onBackPressed() {
+        if(recyclerView.getVisibility()==View.VISIBLE){
+            recyclerView.setVisibility(View.GONE);
+            jous.setVisibility(View.VISIBLE);
+            servesitems.clear();
+            serves =null;
+            System.out.println(servesitems.size() + "       size");
+        }
+
+        else {
+            super.onBackPressed();
+        }
     }
+}
 

@@ -144,7 +144,7 @@ public class Cart extends AppCompatActivity {
                     try{
                     for (int i = 0; i < saleList.size(); i++) {
                         String query = "insert into table"+getPrefs("tnum",Cart.this)+" (NAME, PRICE , quantity) values(N'"
-                                + saleList.get(i).get("name").toString() + "','" + saleList.get(i).get("price") + "','" + saleList.get(i).get("quantity") + "')";
+                                + saleList.get(i).get("name") + "','" + saleList.get(i).get("price") + "','" + saleList.get(i).get("quantity") + "')";
                         PreparedStatement preparedStmt = connect.prepareStatement(query);
                         preparedStmt.execute();
                         ConnectionResult = "successful";
